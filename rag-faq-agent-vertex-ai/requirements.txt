@@ -1,0 +1,1 @@
+google-cloud-aiplatform[adk,agent_engines,corpora]>=1.102.0

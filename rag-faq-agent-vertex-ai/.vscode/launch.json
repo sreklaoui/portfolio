@@ -1,0 +1,18 @@
+{
+
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python Debugger: rag-deploy.py",
+            "type": "debugpy",
+            "request": "launch",
+            "env": {
+                "GOOGLE_APPLICATION_CREDENTIALS": "${workspaceFolder}/credentials.json"
+            },
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "program": "${workspaceFolder}/deploy/rag-deploy.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}
