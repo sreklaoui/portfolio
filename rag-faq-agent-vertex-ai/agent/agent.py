@@ -4,9 +4,10 @@ from vertexai.generative_models import GenerativeModel, Tool
 from llm_instruction import INSTRUCTION
 
 # Project and RAG configuration
-PROJECT_ID = "airy-phalanx-116417"
+PROJECT_ID = "your-gcp-project-id"
 LOCATION = "us-central1"
-RAG_CORPUS_NAME = "projects/774705473777/locations/us-central1/ragCorpora/2305843009213693952"
+RAG_CORPUS_NAME = "projects/your-gcp-project-id/locations/us-central1/ragCorpora/your-corpus-id"
+
 
 # Initialize Vertex AI
 vertexai.init(project=PROJECT_ID, location=LOCATION)
@@ -26,7 +27,7 @@ rag_retrieval_tool = Tool.from_retrieval(
 
 # Create a Gemini model instance with the RAG tool
 rag_model = GenerativeModel(
-    model_name="gemini-2.0-flash-exp",
+    model_name="gemini-2.0-flash-001",
     tools=[rag_retrieval_tool],
     system_instruction=INSTRUCTION
 )

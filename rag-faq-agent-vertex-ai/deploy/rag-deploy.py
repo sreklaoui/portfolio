@@ -3,9 +3,9 @@ from vertexai.preview import rag
 import vertexai
 import os
 
-PROJECT_ID = "airy-phalanx-116417"
+PROJECT_ID = "your-gcp-project-id"
 LOCATION = "us-central1"
-BUCKET_NAME = "rag-faq-corpus-vertex-ai-sandbox"
+BUCKET_NAME = "your-rag-corpus-bucket"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOURCE_FILE = os.path.join(ROOT, "data/utils", "faq_dataset_rag_ready.jsonl")
 DEST_BLOB = "faq_dataset_rag_ready.jsonl"
